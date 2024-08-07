@@ -11,6 +11,11 @@ docker version
 docker-compose --version
 ```
 
+ ```bash
+sudo apt upgrade
+sudo apt install python3-venv python3-pip 
+```
+
 1. Переходим во Фронтенд
  ```bash
 cd ../frontend

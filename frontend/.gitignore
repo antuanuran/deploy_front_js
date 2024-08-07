@@ -3,7 +3,7 @@ venv/
 .venv/
 
 # Environments
-.env
+#.env
 
 # Builds
 [Bb]uild/
