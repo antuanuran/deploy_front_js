@@ -42,18 +42,18 @@ services:
         networks:
             - main_network
 
-    onvif:
-        container_name: onvif
-        image: antuanuran/onvif:latest
-        restart: unless-stopped
-        depends_on:
-            - rabbitmq
-        volumes:
-            - ./backend/gstream/configs:/app/configs_common/
-        ports:
-            - "8080:8080"
-        networks:
-            - main_network
+#    onvif:
+#        container_name: onvif
+#        image: antuanuran/onvif:latest
+#        restart: unless-stopped
+#        depends_on:
+#            - rabbitmq
+#        volumes:
+#            - ./backend/gstream/configs:/app/configs_common/
+#        ports:
+#            - "8080:8080"
+#        networks:
+#            - main_network
 
 volumes:
     video-volume:

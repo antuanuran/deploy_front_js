@@ -1,118 +1,105 @@
-bags:
-  classes:
-  - 0
-  colors:
-    bag: Grey
-  conf_hand_up: null
-  conf_keypoints: 0.0
-  description: Модель для обнаружения сумок
-  high_text: 0.6
-  imgsz: 640
-  path: /app/models/pt/bags.pt
-  size_points: 0
-  task: detect
-  type: model_yolo
-bags_sev:
-  classes:
-  - 24
-  - 26
-  - 28
-  colors:
-    backpack: Grey
-    handbag: Grey
-    suitcase: Grey
-  conf_hand_up: null
-  conf_keypoints: 0.0
-  description: Модель для обнаружения сумок
-  high_text: 0.6
-  imgsz: 640
-  path: /app/models/pt/yolo_model_8/yolov8s.pt
-  size_points: 0
-  task: detect
-  type: model_yolo
-face_hiding:
-  classes:
-  - 0
-  colors:
-    balaclava: Apricot
-    concealing glasses: Apricot
-    hand: Apricot
-    medicine mask: Apricot
-    non-concealing glasses: Apricot
-    nothing: Apricot
-    scarf: Apricot
-  conf_hand_up: null
-  conf_keypoints: 0.0
-  description: Модель для обнаружения лиц
-  high_text: 0.6
-  imgsz: 640
-  path: /app/models/pt/new/hidding_face_s.pt
-  size_points: 0
-  task: detect
-  type: need_skeleton
-guns:
-  classes:
-  - 0
-  - 1
-  colors:
-    gun: Red
-    knife: Red
-  conf_hand_up: null
-  conf_keypoints: 0.0
-  description: 'False'
-  high_text: 0.6
-  imgsz: 640
-  path: /app/models/pt/guns.pt
-  size_points: 0
-  task: detect
-  type: need_skeleton
-human_fault:
-  classes:
-  - 0
-  colors:
-    fall down: Brown
-  conf_hand_up: null
-  conf_keypoints: 0.0
-  description: Модель для обнаружения состояния человека
-  high_text: 0.6
-  imgsz: 640
-  path: /app/models/pt/human_fault.pt
-  size_points: 0
-  task: detect
-  type: need_skeleton
-siz:
-  classes:
-  - 0
-  - 1
-  colors:
-    head: Pink
-    helmet: Pink
-    vest: Pink
-  conf_hand_up: null
-  conf_keypoints: 0.0
-  description: Модель для обнаружения СИЗ
-  high_text: 0.6
-  imgsz: 640
-  path: /app/models/pt/siz.pt
-  size_points: 0
-  task: detect
-  type: need_skeleton
+######################################################################################
+# distinct colors https://sashamaps.net/docs/resources/20-colors/:
+# name         | RGB
+# Maroon       | (128, 0, 0)
+# Brown        | (170, 110, 40)
+# Olive        | (128, 128, 0)
+# Teal         | (0, 128, 128)
+# Navy         | (0, 0, 128)
+# Black        | (0, 0, 0)
+# Red          | (230, 25, 75)
+# Orange       | (245, 130, 48)
+# Yellow       | (255, 225, 25)
+# Lime         | (210, 245, 60)
+# Green        | (60, 180, 75)
+# Cyan         | (70, 240, 240)
+# Blue         | (0, 130, 200)
+# Purple       | (145, 30, 180)
+# Magenta      | (240, 50, 230)
+# Grey         | (240, 50, 230)
+# Pink         | (250, 190, 212)
+# Apricot      | (255, 215, 180)
+# Beige        | (255, 250, 200)
+# Mint         | (170, 255, 195)
+# Lavender     | (220, 190, 255)
+# White        | (255, 255, 255)
+######################################################################################
+# observe detecting classes in models in cameras.yaml
+######################################################################################
+
 skeleton:
-  classes:
-  - 0
-  colors:
-    body: Magenta
-    face: Green
-    hands: Orange
-    hands_up: Red
-    legs: Blue
-    person: Navy
-  conf_hand_up: null
-  conf_keypoints: 0.7
-  description: Модель для обнаружения скелетов
-  high_text: 0.6
-  imgsz: 640
-  path: /app/models/pt/skeleton.pt
-  size_points: 1
-  task: pose
-  type: model_pose_yolo
+    path: /app/models/pt/skeleton.pt
+    description: "Модель для обнаружения скелетов"
+    conf: 0.7
+    conf_keypoints: 0.7
+    conf_hand_up: 0.7
+    imgsz: 640
+    colors: { person: Navy, face: Green, hands: Orange, legs: Blue, body: Magenta }
+    high_text: 0.6
+    size_points: 1
+    type: model_pose_yolo
+    classes: [0]
+    task: pose
+
+guns:
+    path: /app/models/pt/guns.pt
+    conf: 0.7
+    imgsz: 640
+    colors: { gun: Red, knife: Red }
+    high_text: 0.6
+    type: need_skeleton
+    classes: [0, 1]
+    task: detect
+
+bags:
+    path: /app/models/pt/bags.pt
+    description: "Модель для обнаружения сумок"
+    conf: 0.7
+    imgsz: 640
+    colors: { bag: Lime }
+    high_text: 0.6
+    type: model_yolo
+    classes: [0]
+    task: detect
+
+face_hiding:
+    path: /app/models/pt/face_hiding.pt
+    description: "Модель для обнаружения лиц"
+    conf: 0.7
+    imgsz: 640
+    colors:
+        {
+            balaclava: Apricot,
+            concealing glasses: Apricot,
+            hand: Apricot,
+            medicine mask: Apricot,
+            non-concealing glasses: Apricot,
+            nothing: Apricot,
+            scarf: Apricot,
+        }
+    high_text: 0.6
+    type: need_skeleton
+    classes: [0, 1, 2, 3, 4, 5, 6]
+    task: detect
+
+human_fault:
+    path: /app/models/pt/human_fault.pt
+    description: "Модель для обнаружения состояния человека"
+    conf: 0.7
+    imgsz: 640
+    colors: { fall down: Brown }
+    high_text: 0.6
+    type: need_skeleton
+    classes: [0]
+    task: detect
+
+siz:
+    path: /app/models/pt/siz.pt
+    description: "Модель для обнаружения СИЗ"
+    conf: 0.7
+    imgsz: 640
+    colors: { helmet: Pink, vest: Pink, head: Pink }
+    high_text: 0.6
+    type: need_skeleton
+    classes: [0, 1, 2]
+    task: detect

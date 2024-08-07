@@ -1,0 +1,13 @@
+ultralytics
+dill
+pika
+onnx
+onnxruntime
+colorama
+opencv-python==4.8.0.74
+hydra-core
+dicttoxml
+bitarray
+onnxruntime-gpu
+python-vlc
+pydlpack

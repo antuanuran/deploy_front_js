@@ -1,100 +1,102 @@
-backpack:
-  model: bags
-  text: tns1:VideoAnalytics/Bags/Bag
-  text_for_onvif: Bag detected
-  text_for_telegram: Обнаружена сумка
-bag:
-  model: bags
-  text: tns1:VideoAnalytics/Bags/Bag
-  text_for_onvif: Bag detected
-  text_for_telegram: Обнаружена сумка
-balaclava:
-  model: face_hiding
-  text: tns1:VideoAnalytics/FaceHiding
-  text_for_onvif: Balaclava detected
-  text_for_telegram: Обнаружен человек в балаклаве
-big bag:
-  model: bags
-  text: tns1:VideoAnalytics/Bags/BigBag
-  text_for_onvif: Big bag detected
-  text_for_telegram: Обнаружена большая сумка
-concealing glasses:
-  model: face_hiding
-  text: tns1:VideoAnalytics/Face_hiding/ManInGlasses
-  text_for_onvif: A man with glasses was discovered
-  text_for_telegram: Обнаружен человек в очках
-fall down:
-  model: human_fault
-  text: tns1:VideoAnalytics/HumanFault
-  text_for_onvif: Person fall down detected
-  text_for_telegram: Обнаружен человек в падении
-gun:
-  model: guns
-  text: tns1:VideoAnalytics/Guns/Gun
-  text_for_onvif: Gun detected
-  text_for_telegram: Обнаружено оружие
-hand:
-  model: face_hiding
-  text: tns1:VideoAnalytics/FaceHiding/Head
-  text_for_onvif: Head discovered
-  text_for_telegram: Обнаружена голова
-handbag:
-  model: bags
-  text: tns1:VideoAnalytics/Bags/Bag
-  text_for_onvif: Bag detected
-  text_for_telegram: Обнаружена сумка
-hands_up:
-  model: skeleton
-  text: tns1:VideoAnalytics/Skeleton/ManHandsUp
-  text_for_onvif: Person hands up
-  text_for_telegram: Человек поднял руки вверх
-head:
-  model: siz
-  text: tns1:VideoAnalytics/Equipment/Head
-  text_for_onvif: Head discovered
-  text_for_telegram: Обнаружена голова
-helmet:
-  model: siz
-  text: tns1:VideoAnalytics/Equipment/ManInHelmet
-  text_for_onvif: Person in the helmet detected
-  text_for_telegram: Обнаружен человек в шлеме
-knife:
-  model: guns
-  text: tns1:VideoAnalytics/Guns/ColdGun
-  text_for_onvif: Cold gun detected
-  text_for_telegram: Обнаружено холодное оружие
-medicine mask:
-  model: face_hiding
-  text: tns1:VideoAnalytics/FaceHiding/ManInMedicineMask
-  text_for_onvif: A man was found wearing a medical mask
-  text_for_telegram: Обнаружен человек в медицинской маске
-non-concealing glasses:
-  model: face_hiding
-  text: tns1:VideoAnalytics/FaceHiding/ManInNonConcealingGlasses
-  text_for_onvif: A man wearing clear glasses was discovered
-  text_for_telegram: Обнаружен человек в прозрачных очках
-nothing:
-  model: face_hiding
-  text: tns1:VideoAnalytics/FaceHiding/NothingHidingFace
-  text_for_onvif: A man was discovered without hiding his face
-  text_for_telegram: Обнаружен человек без сокрытия лица
+# events for clients and metadata:
 person:
-  model: skeleton
-  text: tns1:VideoAnalytics/Skeleton/Person
-  text_for_onvif: Person detected
-  text_for_telegram: Обнаружен человек
-scarf:
-  model: face_hiding
-  text: tns1:VideoAnalytics/FaceHiding/ManInScarf
-  text_for_onvif: A man wearing a scarf was discovered
-  text_for_telegram: Обнаружен человек в шарфе
-suitcase:
-  model: bags
-  text: tns1:VideoAnalytics/Bags/Bag
-  text_for_onvif: Bag detected
-  text_for_telegram: Обнаружена сумка
+    text: "tns1:VideoAnalytics/Skeleton/Person"
+    model: "skeleton"
+    text_for_telegram: "Обнаружен человек"
+    text_for_onvif: "Person detected"
+
+hands_up:
+    text: "tns1:VideoAnalytics/Skeleton/ManHandsUp"
+    model: "skeleton"
+    text_for_telegram: "Человек поднял руки вверх"
+    text_for_onvif: "Person hands up"
+
+gun:
+    text: "tns1:VideoAnalytics/Guns/Gun"
+    model: "guns"
+    text_for_telegram: "Обнаружено оружие"
+    text_for_onvif: "Gun detected"
+
+knife:
+    text: "tns1:VideoAnalytics/Guns/ColdGun"
+    model: "guns"
+    text_for_telegram: "Обнаружено холодное оружие"
+    text_for_onvif: "Cold gun detected"
+
+bag:
+    text: "tns1:VideoAnalytics/Bags/Bag"
+    model: "bags"
+    text_for_telegram: "Обнаружена сумка"
+    text_for_onvif: "Bag detected"
+
+big bag:
+    text: "tns1:VideoAnalytics/Bags/BigBag"
+    model: "bags"
+    text_for_telegram: "Обнаружена большая сумка"
+    text_for_onvif: "Big bag detected"
+
+balaclava:
+    text: "tns1:VideoAnalytics/FaceHiding"
+    model: "face_hiding"
+    text_for_telegram: "Обнаружен человек в балаклаве"
+    text_for_onvif: "Balaclava detected"
+
+fall down:
+    text: "tns1:VideoAnalytics/HumanFault"
+    model: "human_fault"
+    text_for_telegram: "Обнаружен человек в падении"
+    text_for_onvif: "Person fall down detected"
+
+helmet:
+    text: "tns1:VideoAnalytics/Equipment/ManInHelmet"
+    model: "siz"
+    text_for_telegram: "Обнаружен человек в шлеме"
+    text_for_onvif: "Person in the helmet detected"
+
 vest:
-  model: siz
-  text: tns1:VideoAnalytics/Equipment/ManInVest
-  text_for_onvif: Person in the vest detected
-  text_for_telegram: Обнаружен человек в жилете
+    text: "tns1:VideoAnalytics/Equipment/ManInVest"
+    model: "siz"
+    text_for_telegram: "Обнаружен человек в жилете"
+    text_for_onvif: "Person in the vest detected"
+
+concealing glasses:
+    text: "tns1:VideoAnalytics/Face_hiding/ManInGlasses"
+    model: "face_hiding"
+    text_for_telegram: "Обнаружен человек в очках"
+    text_for_onvif: "A man with glasses was discovered"
+
+hand:
+    text: "tns1:VideoAnalytics/FaceHiding/Head"
+    model: "face_hiding"
+    text_for_telegram: "Обнаружена голова"
+    text_for_onvif: "Head discovered"
+
+medicine mask:
+    text: "tns1:VideoAnalytics/FaceHiding/ManInMedicineMask"
+    model: "face_hiding"
+    text_for_telegram: "Обнаружен человек в медицинской маске"
+    text_for_onvif: "A man was found wearing a medical mask"
+
+non-concealing glasses:
+    text: "tns1:VideoAnalytics/FaceHiding/ManInNonConcealingGlasses"
+    model: "face_hiding"
+    text_for_telegram: "Обнаружен человек в прозрачных очках"
+    text_for_onvif: "A man wearing clear glasses was discovered"
+
+nothing:
+    text: "tns1:VideoAnalytics/FaceHiding/NothingHidingFace"
+    model: "face_hiding"
+    text_for_telegram: "Обнаружен человек без сокрытия лица"
+    text_for_onvif: "A man was discovered without hiding his face"
+
+scarf:
+    text: "tns1:VideoAnalytics/FaceHiding/ManInScarf"
+    model: "face_hiding"
+    text_for_telegram: "Обнаружен человек в шарфе"
+    text_for_onvif: "A man wearing a scarf was discovered"
+
+head:
+    text: "tns1:VideoAnalytics/Equipment/Head"
+    model: "siz"
+    text_for_telegram: "Обнаружена голова"
+    text_for_onvif: "Head discovered"

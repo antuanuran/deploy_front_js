@@ -1,5 +1,7 @@
 ### Install Docker on ubuntu
 
+git clone https://github.com/antuanuran/deploy_front_js.git
+
 Короткий способ:
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -11,13 +13,12 @@ docker version
 docker-compose --version
 ```
 
- ```bash
-sudo apt upgrade
+```bash
 sudo apt install python3-venv python3-pip 
 ```
 
 1. Переходим во Фронтенд
- ```bash
+```bash
 cd ../frontend
 ```
 

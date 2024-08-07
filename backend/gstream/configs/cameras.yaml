@@ -1,207 +1,71 @@
-'1':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: V10 AS 01.01
-  location_rtspsrc: rtsp://admin:Admin123!@10.90.50.95:554/profile2/media.smp
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '1'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-1
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'2':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: V10 AS 01.18
-  location_rtspsrc: rtsp://admin:Admin123!@10.90.50.103:554/profile2/media.smp
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '2'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-2
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'3':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: V10 AS 01.15
-  location_rtspsrc: rtsp://admin:Admin123!@10.90.50.102:554/profile2/media.smp
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '3'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-3
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'41':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: Camera with fake video 1
-  location_rtspsrc: rtsp://rtsp_video_stream:8557/0
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '41'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-41
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'42':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: Camera with fake video 2
-  location_rtspsrc: rtsp://rtsp_video_stream:8557/1
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '42'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-42
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'43':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: Camera with fake video 3
-  location_rtspsrc: rtsp://rtsp_video_stream:8557/2
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '43'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-43
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'5':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: Office of laboratory
-  location_rtspsrc: rtsp://admin:Admin12345@10.0.10.207:554/profile1/media.smp
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '5'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-5
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'6':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: Office 417
-  location_rtspsrc: rtsp://service:Admin12345!@10.0.10.209:554/profile2/media.smp
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '6'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-6
-  quality: low
-  user_id: None
-  user_pw: None
-  video_height: 600
-  video_width: 1200
-'7':
-  framerate: 16
-  hlssink_width: 1200
-  location_description: Stend cam 1
-  location_rtspsrc: rtsp://172.16.2.91:554/0/onvif/profile1/media.smp
-  models:
-  - skeleton
-  - guns
-  - bags
-  - face_hiding
-  - human_fault
-  - siz
-  name: '7'
-  opencv_output_height: 600
-  opencv_output_width: 1200
-  port: 8554
-  profiles:
-  - H264-7
-  quality: low
-  user_id: admin
-  user_pw: Admin123!
-  video_height: 600
-  video_width: 1200
+######################################################################################
+# observe detecting classes in models:
+# model        | classes
+# bags         | {0: 'bag'}
+# face_hiding  | {0: 'balaclava', 1: 'concealing glasses', 2: 'hand',
+#              |  3: 'medicine mask', 4: 'non-concealing glasses',
+#              |  5: 'nothing', 6: 'scarf'}
+# guns         | {0: 'gun', 1: 'knife'}
+# human_fault  | {0: 'fall down'}
+# siz          | {0: 'helmet', 1: 'vest', 2: 'head'}
+# skeleton     | {0: 'person}
+######################################################################################
+# enaible port fot rtsp server:
+# - 8554
+# - 8555
+# - 8556
+######################################################################################
+
+"1":
+    name: "1"
+    location_rtspsrc: rtsp://rtsp_video_stream:8557/stream
+    location_description: "Camera with fake video"
+    framerate: 16
+    models: [skeleton, guns, bags, face_hiding, human_fault, siz]
+    hlssink_width: 1200
+    hlssink_height: 600
+    video_width: 1200
+    video_height: 600
+    port: 8554
+    quality: low
+    opencv_output_width: 1200
+    opencv_output_height: 600
+    user_id: None
+    user_pw: None
+    profiles: ["H264-1", "666"]
+
+"2":
+    name: "2"
+    location_rtspsrc: rtsp://admin:Admin12345@10.0.10.207:554/profile1/media.smp
+    location_description: "Office of laboratory"
+    framerate: 16
+    models: [skeleton, guns, bags, face_hiding, human_fault, siz]
+    hlssink_width: 1200
+    hlssink_height: 600
+    video_width: 1200
+    video_height: 600
+    port: 8554
+    opencv_output_width: 1200
+    opencv_output_height: 600
+    quality: low
+    user_id: None
+    user_pw: None
+    profiles: ["H264-2"]
+
+"3":
+    name: "3"
+    location_rtspsrc: rtsp://service:Admin12345!@10.0.10.209:554/profile2/media.smp
+    location_description: "Office 417"
+    framerate: 16
+    models: [skeleton, guns, bags, face_hiding, human_fault, siz]
+    hlssink_width: 1200
+    hlssink_height: 600
+    video_width: 1200
+    video_height: 600
+    port: 8554
+    opencv_output_width: 1200
+    opencv_output_height: 600
+    quality: low
+    user_id: None
+    user_pw: None
+    profiles: ["H264-3"]

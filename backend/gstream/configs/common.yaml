@@ -1,21 +1,47 @@
-cameras_in_work:
-- '2'
-- '3'
-device: auto
-device_id: /app/video/run.mp4
-draw_results_detect: true
-draw_results_detect_full: false
-fps: 24
-image_width: 1200
-ip_server: 10.0.10.211
+cameras_in_work: ["2", "3"]
+# past number of camera in backend/onvif/src/utils.py line 21
+# this vcap = cv2.VideoCapture(URI['1'])
 level_debug: 1
 logging_level: INFO
-onvif_works: true
-port: 8557
-port_for_onvif: 8080
-start_rtsp_video_stream: true
-status_bus_messages: true
-stream_uri: /stream
-telegram_works: true
+status_bus_messages: True
+# time of live client of metadata in seconds
+# in order to more, than pts and 360 seconds
 time_live_client: 360
+port_for_onvif: 8080
+class_for_pass_round: ["helmet", "vest"]
+
+# draw_results_detect and draw_results_detect_full
+# need't to status True together
+draw_results_detect: True
+draw_results_detect_full: False
+
+# variants to activate:
+# hls
+# rtsp_rts
+# test - only for the first camera in list cameras_in_work
+# for test it's neet to activate in a local terminal "xhost + local:":
 type_protocol: rtsp_rts
+
+# telegram / frontend settings (True/False)
+telegram_works: True
+onvif_works: True
+
+# my home 192.168.0.144
+# my office 192.168.56.1
+# server 10.0.10.211
+ip_server: 10.0.10.211
+
+# variants to activate:
+# cpu
+# cuda
+# auto
+device: auto
+
+# RTSP server with loop video
+start_rtsp_video_stream: True
+device_id: "/app/video/activate.mp4"
+fps: 24
+image_width: 1200
+image_height: 600
+port: 8557
+stream_uri: "/stream"

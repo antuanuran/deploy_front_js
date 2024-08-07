@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope
+    xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:tt="http://www.onvif.org/ver10/schema"
+    xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+    <soapenv:Body>
+        <tds:GetNetworkInterfacesResponse>
+        </tds:GetNetworkInterfacesResponse>
+    </soapenv:Body>
+</soapenv:Envelope>
