@@ -1,0 +1,13 @@
+[Unit]
+Description=Service deploy_front_js
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/root/deploy_front_js
+ExecStart=/root/deploy_front_js/venv/bin/gunicorn --workers 1 --bind unix:/srv/project.sock frontend_gstreamer.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+

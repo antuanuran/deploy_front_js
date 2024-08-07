@@ -17,6 +17,18 @@ docker-compose --version
 sudo apt install python3-venv python3-pip 
 ```
 
+```bash
+docker pull antuanuran/telegram 
+```
+
+```bash
+docker pull antuanuran/onvif 
+```
+
+```bash
+docker pull antuanuran/metadata 
+```
+
 1. Переходим во Фронтенд
 ```bash
 cd ../frontend
@@ -29,5 +41,19 @@ pip install -r requirements.txt
 
 3. run:
 ```bash
-python3 manage.py runserver
+python3 manage.py runserver 0.0.0.0:8000
 ```
+
+Gunicorn:
+[Unit]
+Description=Service Razvertka
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/root/razvertivanie
+ExecStart=/root/razvertivanie/venv/bin/gunicorn --workers 1 --bind unix:/root/razvertivanie/news/project.sock news.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
