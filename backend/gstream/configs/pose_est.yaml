@@ -1,0 +1,38 @@
+order_keypoints: {
+    nose: [0, face],
+    left_eye: [1, face],
+    right_eye: [2, face],
+    left_ear: [3, face],
+    right_ear: [4, face],
+    left_shoulder: [5, hands],
+    right_shoulder: [6, hands],
+    left_elbow: [7, hands],
+    right_elbow: [8, hands],
+    left_brush: [9, hands],
+    right_brush: [10, hands],
+    left_hip: [11, legs],
+    right_hip: [12, legs],
+    left_knee: [13, legs],
+    right_knee: [14, legs],
+    left_foot: [15, legs],
+    right_foot: [16, legs]
+}
+
+order_limbs: [
+    [nose, left_eye, face],
+    [nose, right_eye, face],
+    [left_eye, left_ear, face],
+    [right_eye, right_ear, face],
+    [left_shoulder, right_shoulder, hands],
+    [left_hip, right_hip, body],
+    [left_shoulder, left_hip, body],
+    [right_shoulder, right_hip, body],
+    [left_shoulder, left_elbow, hands],
+    [right_shoulder, right_elbow, hands],
+    [left_elbow, left_brush, hands],
+    [right_elbow, right_brush, hands],
+    [left_hip, left_knee, legs],
+    [right_hip, right_knee, legs],
+    [left_knee, left_foot, legs],
+    [right_knee, right_foot, legs]
+]

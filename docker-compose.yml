@@ -1,0 +1,63 @@
+version: "3"
+
+services:
+
+    rabbitmq:
+        container_name: rabbitmq_videoanalytics
+        image: rabbitmq:3.10.7-management
+        restart: always
+        environment:
+            - RABBITMQ_DEFAULT_USER=user
+            - RABBITMQ_DEFAULT_PASS=password
+            - RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS=-rabbit log_levels
+              [{connection,error},{default,error}] disk_free_limit 2147483648
+              hipe_compile_timeout 30000 heartbeat 120000
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        networks:
+            - main_network
+
+    metadata_processor:
+        container_name: metadata_processor_videoanalytics
+        image: antuanuran/metadata:latest
+        restart: unless-stopped
+        depends_on:
+            - rabbitmq
+        volumes:
+            - ./backend/gstream/configs:/app/common_configs/
+            - ./data/images:/app/data/images
+        networks:
+            - main_network
+
+    telegram_worker:
+        container_name: telegram_worker_videoanalytics
+        image: antuanuran/telegram:latest
+        restart: unless-stopped
+        depends_on:
+            - rabbitmq
+        volumes:
+            - ./data/images:/app/data/images
+            - ./backend/gstream/configs:/app/common_configs/
+        networks:
+            - main_network
+
+    onvif:
+        container_name: onvif
+        image: antuanuran/onvif:latest
+        restart: unless-stopped
+        depends_on:
+            - rabbitmq
+        volumes:
+            - ./backend/gstream/configs:/app/configs_common/
+        ports:
+            - "8080:8080"
+        networks:
+            - main_network
+
+volumes:
+    video-volume:
+
+networks:
+    main_network:
+        driver: bridge

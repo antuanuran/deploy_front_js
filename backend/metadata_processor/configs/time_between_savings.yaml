@@ -1,0 +1,95 @@
+backpack:
+  frontend_send_interval: 2
+  onvif_send_interval: 2
+  save_interval: 1
+  telegram_send_interval: 2
+bag:
+  frontend_send_interval: 2
+  onvif_send_interval: 2
+  save_interval: 1
+  telegram_send_interval: 2
+balaclava:
+  frontend_send_interval: 1
+  onvif_send_interval: 1
+  save_interval: 1
+  telegram_send_interval: 1
+concealing glasses:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+fall down:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 1
+  telegram_send_interval: 5
+gun:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 1
+  telegram_send_interval: 5
+hand:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+handbag:
+  frontend_send_interval: 2
+  onvif_send_interval: 2
+  save_interval: 1
+  telegram_send_interval: 2
+hands_up:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+head:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+helmet:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+knife:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 1
+  telegram_send_interval: 5
+medicine mask:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+non-concealing glasses:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+nothing:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+person:
+  frontend_send_interval: 100000000000000
+  onvif_send_interval: 100000000000000
+  save_interval: 100000000000000
+  telegram_send_interval: 100000000000000
+scarf:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5
+suitcase:
+  frontend_send_interval: 2
+  onvif_send_interval: 2
+  save_interval: 1
+  telegram_send_interval: 2
+vest:
+  frontend_send_interval: 5
+  onvif_send_interval: 5
+  save_interval: 5
+  telegram_send_interval: 5

@@ -1,0 +1,118 @@
+bags:
+  classes:
+  - 0
+  colors:
+    bag: Grey
+  conf_hand_up: null
+  conf_keypoints: 0.0
+  description: Модель для обнаружения сумок
+  high_text: 0.6
+  imgsz: 640
+  path: /app/models/pt/bags.pt
+  size_points: 0
+  task: detect
+  type: model_yolo
+bags_sev:
+  classes:
+  - 24
+  - 26
+  - 28
+  colors:
+    backpack: Grey
+    handbag: Grey
+    suitcase: Grey
+  conf_hand_up: null
+  conf_keypoints: 0.0
+  description: Модель для обнаружения сумок
+  high_text: 0.6
+  imgsz: 640
+  path: /app/models/pt/yolo_model_8/yolov8s.pt
+  size_points: 0
+  task: detect
+  type: model_yolo
+face_hiding:
+  classes:
+  - 0
+  colors:
+    balaclava: Apricot
+    concealing glasses: Apricot
+    hand: Apricot
+    medicine mask: Apricot
+    non-concealing glasses: Apricot
+    nothing: Apricot
+    scarf: Apricot
+  conf_hand_up: null
+  conf_keypoints: 0.0
+  description: Модель для обнаружения лиц
+  high_text: 0.6
+  imgsz: 640
+  path: /app/models/pt/new/hidding_face_s.pt
+  size_points: 0
+  task: detect
+  type: need_skeleton
+guns:
+  classes:
+  - 0
+  - 1
+  colors:
+    gun: Red
+    knife: Red
+  conf_hand_up: null
+  conf_keypoints: 0.0
+  description: 'False'
+  high_text: 0.6
+  imgsz: 640
+  path: /app/models/pt/guns.pt
+  size_points: 0
+  task: detect
+  type: need_skeleton
+human_fault:
+  classes:
+  - 0
+  colors:
+    fall down: Brown
+  conf_hand_up: null
+  conf_keypoints: 0.0
+  description: Модель для обнаружения состояния человека
+  high_text: 0.6
+  imgsz: 640
+  path: /app/models/pt/human_fault.pt
+  size_points: 0
+  task: detect
+  type: need_skeleton
+siz:
+  classes:
+  - 0
+  - 1
+  colors:
+    head: Pink
+    helmet: Pink
+    vest: Pink
+  conf_hand_up: null
+  conf_keypoints: 0.0
+  description: Модель для обнаружения СИЗ
+  high_text: 0.6
+  imgsz: 640
+  path: /app/models/pt/siz.pt
+  size_points: 0
+  task: detect
+  type: need_skeleton
+skeleton:
+  classes:
+  - 0
+  colors:
+    body: Magenta
+    face: Green
+    hands: Orange
+    hands_up: Red
+    legs: Blue
+    person: Navy
+  conf_hand_up: null
+  conf_keypoints: 0.7
+  description: Модель для обнаружения скелетов
+  high_text: 0.6
+  imgsz: 640
+  path: /app/models/pt/skeleton.pt
+  size_points: 1
+  task: pose
+  type: model_pose_yolo

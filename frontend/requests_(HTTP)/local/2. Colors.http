@@ -1,0 +1,13 @@
+### Вывод всех полей конфига - Colors.py
+GET http://localhost:8000/api/colors/
+
+
+###
+POST http://localhost:8000/api/colors/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "color_name": "Black",
+  "path": "/home/backend/gstream/configs/colors.yaml"
+}

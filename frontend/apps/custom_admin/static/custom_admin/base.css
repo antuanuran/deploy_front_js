@@ -1,0 +1,8 @@
+html[data-theme='light'],
+:root{
+  --primary: #8D0645;
+  /*--secondary: #8d1446;*/
+  --secondary: #cbc9c9;
+  --accent: #000000;
+}
+

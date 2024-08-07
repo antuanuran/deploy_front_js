@@ -1,0 +1,9 @@
+django==4.2.5
+python-dotenv==1.0.0
+PyYAML==6.0.2
+djangorestframework==3.15.1
+djoser==2.2.2
+djangorestframework_simplejwt==5.3.1
+django-cors-headers==4.4.0
+dynamic-rest==2.3.0
+django-ordered-model==3.7.4

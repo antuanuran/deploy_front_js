@@ -1,0 +1,21 @@
+cameras_in_work:
+- '2'
+- '3'
+device: auto
+device_id: /app/video/run.mp4
+draw_results_detect: true
+draw_results_detect_full: false
+fps: 24
+image_width: 1200
+ip_server: 10.0.10.211
+level_debug: 1
+logging_level: INFO
+onvif_works: true
+port: 8557
+port_for_onvif: 8080
+start_rtsp_video_stream: true
+status_bus_messages: true
+stream_uri: /stream
+telegram_works: true
+time_live_client: 360
+type_protocol: rtsp_rts

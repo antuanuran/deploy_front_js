@@ -1,0 +1,36 @@
+### TOKEN для нового Юзера (Создание)
+POST http://localhost:8000/api/auth/jwt/create/
+Content-Type: application/json
+
+{
+  "username": "user3",
+  "password": "develop12345"
+}
+
+> {% client.global.set("token", response.body.access); %}
+
+
+
+### USER - Создание нового Юзера
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+
+{
+  "username": "user3",
+  "password": "develop12345"
+}
+
+
+
+
+
+### ДОПОЛНИТЕЛЬНО******************************************************************************
+
+### Проверка данных Юзера
+GET http://localhost:8000/api/users/me/
+Authorization: Bearer {{token}}
+
+
+
+### При работе через Swagger: http://127.0.0.1:8000/docs/swagger/
+### Token для Swagger:        Bearer eyJhbG.......
